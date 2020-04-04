@@ -17,7 +17,7 @@ const MAO = require('multer-aliyun-oss');
         return{
           storage: MAO({
             config: {
-                region:process.env.OSS_REGION,
+                region:process.env.OSS_REGION_NO,
                 accessKeyId:process.env.OSS_ACCESS_KEY_ID,
                 accessKeySecret:process.env.OSS_ACCESS_KEY_SECERT,
                 bucket:process.env.OSS_BUCKET
@@ -26,17 +26,7 @@ const MAO = require('multer-aliyun-oss');
         }
       }
     }),
-    // MulterModule.register({
-    //   // dest:'uploads'
-    //   storage: MAO({
-    //     config: {
-    //         region: 'oss-cn-hangzhou',
-    //         accessKeyId: 'LTAI4Fs6zAxqGQpC8rSr1mcW',
-    //         accessKeySecret: 'Qm0d0iBISDRjJpKvGf03UOdc6HxcUb',
-    //         bucket: 'tfstack'
-    //     }
-    // })
-    // }),
+   
      UsersModule, CoursesModule, EpisodeModule],
   controllers: [AppController],
   providers: [AppService],
